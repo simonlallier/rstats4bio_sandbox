@@ -2,7 +2,7 @@
 A shared sandbox to play around with code and data.
 This is a spot to push code that can be open and viewed by others. 
 
-1[](./sandbox.jpg)
+![](./sandbox.jpg)
 
 **Instructions**  
 1. Clone repo.  
