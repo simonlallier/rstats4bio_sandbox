@@ -1,0 +1,19 @@
+###Finn the human survey play
+
+####Data
+```{r, data, warning=FALSE, message=FALSE}
+library(tidyverse)
+#read in 2016
+data.2016 <- read_csv("data/5081.survey.1.csv")
+data.2016
+
+#read in 2018
+data.2018 <- read_csv("data/5081.survey.2.csv")
+data.2018
+
+#combine years
+data <- bind_rows(data.2016, data.2018)
+data
+#write_csv(data, "data/data.combined.csv")
+
+```

@@ -1,0 +1,40 @@
+year,rep,r.experience,discipline,research.data,r.studio
+2016,1,2,physiology,quantitative,No
+2016,2,1,genetics,quantitative,Yes
+2016,3,2,physiology,quantitative,Yes
+2016,4,3,physiology,quantitative,Yes
+2016,5,1,ecology,quantitative,No
+2016,6,1,physiology,quantitative,No
+2016,7,3,ecology,quantitative,Yes
+2016,8,1,ecology,qualitative,No
+2016,9,1,ecology,quantitative,Yes
+2016,10,3,genetics,quantitative,No
+2016,11,3,ecology,quantitative,Yes
+2016,12,1,ecology,quantitative,No
+2016,13,1,physiology,quantitative,No
+2016,14,2,physiology,quantitative,Yes
+2016,15,1,environmental science,quantitative,Yes
+2016,16,1,physiology,quantitative,No
+2016,17,1,physiology,quantitative,No
+2016,18,2,physiology,quantitative,Yes
+2018,1,1,physiology,quantitative,No
+2018,2,1,physiology,quantitative,Yes
+2018,3,NA,ecology,quantitative,Yes
+2018,4,2,ecology,quantitative,No
+2018,5,2,ecology,quantitative,No
+2018,6,2,physiology,qualitative,No
+2018,7,1,genetics,quantitative,No
+2018,8,1,environmental science,quantitative,No
+2018,9,2,genetics,qualitative,Yes
+2018,10,2,ecology,quantitative,Yes
+2018,11,1,physiology,quantitative,No
+2018,12,3,ecology,quantitative,Yes
+2018,13,4,ecology,quantitative,Yes
+2018,14,3,ecology,quantitative,Yes
+2018,15,2,ecology,quantitative,Yes
+2018,16,2,genetics,quantitative,Yes
+2018,17,NA,genetics,quantitative,No
+2018,18,2,ecology,quantitative,Yes
+2018,19,1,environmental science,quantitative,No
+2018,20,1,environmental science,quantitative,No
+2018,21,2,ecology,qualitative,No
