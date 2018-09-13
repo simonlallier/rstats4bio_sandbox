@@ -187,7 +187,68 @@ data</code></pre>
 ##  9  2016     9            1 ecology    quantitative  Yes     
 ## 10  2016    10            3 genetics   quantitative  No      
 ## # ... with 29 more rows</code></pre>
-<pre class="r"><code>#write_csv(data, &quot;data/data.combined.csv&quot;)</code></pre>
+<pre class="r"><code>#write_csv(data, &quot;data/data.combined.csv&quot;)
+
+#play with wrangling
+ecologists &lt;- data %&gt;%
+  filter(discipline == &quot;ecology&quot;) %&gt;%
+  select(-r.studio)
+ecologists</code></pre>
+<pre><code>## # A tibble: 16 x 5
+##     year   rep r.experience discipline research.data
+##    &lt;int&gt; &lt;int&gt;        &lt;int&gt; &lt;chr&gt;      &lt;chr&gt;        
+##  1  2016     5            1 ecology    quantitative 
+##  2  2016     7            3 ecology    quantitative 
+##  3  2016     8            1 ecology    qualitative  
+##  4  2016     9            1 ecology    quantitative 
+##  5  2016    11            3 ecology    quantitative 
+##  6  2016    12            1 ecology    quantitative 
+##  7  2018     3           NA ecology    quantitative 
+##  8  2018     4            2 ecology    quantitative 
+##  9  2018     5            2 ecology    quantitative 
+## 10  2018    10            2 ecology    quantitative 
+## 11  2018    12            3 ecology    quantitative 
+## 12  2018    13            4 ecology    quantitative 
+## 13  2018    14            3 ecology    quantitative 
+## 14  2018    15            2 ecology    quantitative 
+## 15  2018    18            2 ecology    quantitative 
+## 16  2018    21            2 ecology    qualitative</code></pre>
+<pre class="r"><code>#summary data
+summary.data &lt;- data %&gt;%
+  group_by(discipline) %&gt;%
+  count(research.data)
+summary.data</code></pre>
+<pre><code>## # A tibble: 7 x 3
+## # Groups:   discipline [4]
+##   discipline            research.data     n
+##   &lt;chr&gt;                 &lt;chr&gt;         &lt;int&gt;
+## 1 ecology               qualitative       2
+## 2 ecology               quantitative     14
+## 3 environmental science quantitative      4
+## 4 genetics              qualitative       1
+## 5 genetics              quantitative      5
+## 6 physiology            qualitative       1
+## 7 physiology            quantitative     12</code></pre>
+<pre class="r"><code>summary.data &lt;- data %&gt;%
+  group_by(as.character(year), discipline) %&gt;%
+  count(research.data)
+summary.data</code></pre>
+<pre><code>## # A tibble: 12 x 4
+## # Groups:   as.character(year), discipline [8]
+##    `as.character(year)` discipline            research.data     n
+##    &lt;chr&gt;                &lt;chr&gt;                 &lt;chr&gt;         &lt;int&gt;
+##  1 2016                 ecology               qualitative       1
+##  2 2016                 ecology               quantitative      5
+##  3 2016                 environmental science quantitative      1
+##  4 2016                 genetics              quantitative      2
+##  5 2016                 physiology            quantitative      9
+##  6 2018                 ecology               qualitative       1
+##  7 2018                 ecology               quantitative      9
+##  8 2018                 environmental science quantitative      3
+##  9 2018                 genetics              qualitative       1
+## 10 2018                 genetics              quantitative      3
+## 11 2018                 physiology            qualitative       1
+## 12 2018                 physiology            quantitative      3</code></pre>
 </div>
 </div>
 

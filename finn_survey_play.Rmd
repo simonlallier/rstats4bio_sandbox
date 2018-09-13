@@ -16,4 +16,21 @@ data <- bind_rows(data.2016, data.2018)
 data
 #write_csv(data, "data/data.combined.csv")
 
+#play with wrangling
+ecologists <- data %>%
+  filter(discipline == "ecology") %>%
+  select(-r.studio)
+ecologists
+
+#summary data
+summary.data <- data %>%
+  group_by(discipline) %>%
+  count(research.data)
+summary.data
+
+summary.data <- data %>%
+  group_by(as.character(year), discipline) %>%
+  count(research.data)
+summary.data
+
 ```
