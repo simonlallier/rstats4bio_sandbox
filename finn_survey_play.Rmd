@@ -29,14 +29,27 @@ summary.data <- data %>%
 summary.data
 
 summary.data <- data %>%
-  group_by(as.character(year), discipline) %>%
+  group_by(year, discipline) %>%
   count(research.data)
 summary.data
 ```
 
 ###Viz  
 ```{r, viz, warning=FALSE, message=FALSE}
-qplot(discipline, n, data = summary.data)
+#plot by discipline but ignores year
+ggplot(data, aes(as.character(r.experience))) +
+  geom_histogram(stat = "count") +
+  labs(x= "reported experience in r", y = "frequency") +
+ facet_wrap(~discipline) + 
+  scale_x_discrete(limits = c("1", "2", "3", "4", "5"))
+
+#includes year
+ggplot(data, aes(as.character(r.experience), fill = discipline)) +
+  geom_histogram(stat = "count") +
+  labs(x= "reported experience in r", y = "frequency") +
+ facet_wrap(~year) + 
+  scale_x_discrete(limits = c("1", "2", "3", "4", "5"))
+  
 
 
 ```
