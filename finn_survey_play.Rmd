@@ -32,5 +32,11 @@ summary.data <- data %>%
   group_by(as.character(year), discipline) %>%
   count(research.data)
 summary.data
+```
+
+###Viz  
+```{r, viz, warning=FALSE, message=FALSE}
+qplot(discipline, n, data = summary.data)
+
 
 ```
